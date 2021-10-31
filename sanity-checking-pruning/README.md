@@ -22,7 +22,7 @@ The framework of the code is inherited from [Rethinking the value of Network Pru
 
 ## Dependencies
 
-torch v0.3.1, torchvision v0.2.0, tensorboardX
+pip install torch==1.5.0 torchvision==0.6.0, tensorboardX
 
 
 ## Introduction of existing Python Files
@@ -50,9 +50,13 @@ For both baseline.py and train_ticket.py, the NUM OF EPOCHS are set to be 160 (C
 python baseline.py --dataset cifar10 --arch vgg19_bn --depth 19 \
     --save_dir [PATH TO SAVE THE MODEL]
     
+    
 // This code will use the full ResNet32 network to train on CIFAR-100 for 160 epochs.   
 python baseline.py --dataset cifar100 --arch resnet --depth 32 \ 
     --save_dir [PATH TO SAVE THE MODEL]
+    
+python baseline.py --dataset cifar100 --arch resnet --depth 164 --save_dir model_baseline/ --train-batch 256 --test-batch 256 --gpu-id 1
+
 
 // This code will use the full ResNet32 network to train on Tiny-Imagenet for 300 epochs.
 python baseline.py --dataset tinyimagenet --arch resnet --depth 32 \ 
