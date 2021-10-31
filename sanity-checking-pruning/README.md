@@ -45,6 +45,13 @@ For both baseline.py and train_ticket.py, the NUM OF EPOCHS are set to be 160 (C
 
 ## baseline.py 
 
+// xmc's baseline code
+    python baseline.py --dataset cifar100 --arch resnet --depth 164 --save_dir model_baseline/ --train-batch 256 --test-batch 256 --gpu-id 1
+    python baseline.py --dataset cifar100 --arch vgg19_bn --depth 19 --save_dir model_baseline/vgg19/ --train-batch 256 --test-batch 256 --gpu-id 1
+
+## original baseline.py 
+
+
 ```shell
 // This code will use the full VGG19 network to train on CIFAR-10 for 160 epochs.
 python baseline.py --dataset cifar10 --arch vgg19_bn --depth 19 \
@@ -54,8 +61,6 @@ python baseline.py --dataset cifar10 --arch vgg19_bn --depth 19 \
 // This code will use the full ResNet32 network to train on CIFAR-100 for 160 epochs.   
 python baseline.py --dataset cifar100 --arch resnet --depth 32 \ 
     --save_dir [PATH TO SAVE THE MODEL]
-    
-python baseline.py --dataset cifar100 --arch resnet --depth 164 --save_dir model_baseline/ --train-batch 256 --test-batch 256 --gpu-id 1
 
 
 // This code will use the full ResNet32 network to train on Tiny-Imagenet for 300 epochs.
